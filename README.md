@@ -11,8 +11,8 @@ Please set your working directory.
 
 1.  Make sure you have renv R package is installed
 2.  Run `make build` in terminal to build docker image locally.
-3.  Run `make run_report_mac` or `run_report_win` in terminal and then
-    get the report in `report` folder
+3.  Run `make run_report_mac` or `make run_report_win` in terminal and
+    then get the report in `report` folder
 
 **Using Pull**
 
@@ -21,8 +21,8 @@ xiaxianou/finaldockeru:finaloxxtag](https://hub.docker.com/layers/xiaxianou/fina
 
 1.  Run `make pull` in terminal to access the
     `xiaxianou/finaldockeru:finaloxxtag` image in Docker hub
-2.  Run `make run_report_mac` or `run_report_win` in terminal and then
-    get the report in `report` folder
+2.  Run `make run_report_mac` or `make run_report_win` in terminal and
+    then get the report in `report` folder
 
 # Project description
 
