@@ -1,7 +1,7 @@
 Final project: the risk factors for cardiovascular disease
 ================
 Xiaxian Ou
-2024-12-15
+2024-12-16
 
 Please set your working directory.
 
@@ -19,6 +19,8 @@ Please set your working directory.
 
 [Docker Hub Image:
 xiaxianou/finaldockeru:finaloxxtag](https://hub.docker.com/layers/xiaxianou/finaldockeru/finaloxxtag/images/sha256:087f6e4281b3258d2cfa03c226f062ea8b1206b30a0839e9ca67d201ed4a9c6d?uuid=d0fc485a-272a-4572-a51e-bf32ad9da047)
+
+Note !!! : this image is built under arm64
 
 1.  Run `make pull` in terminal to access the
     `xiaxianou/finaldockeru:finaloxxtag` image in Docker hub
