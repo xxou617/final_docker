@@ -20,7 +20,7 @@ clean:
 	rm -f output/*.rds && rm -f Report.html && rm -f report/Report.html 
 	
 # build local
-PROJECTFILES = Report.Rmd codes/1_table.R codes/2_model.R codes/3_figure.R codes/4_render.R Makefile
+PROJECTFILES = Report.Rmd codes/1_table.R codes/2_model.R codes/3_figure.R codes/4_render.R Makefile data/heart_dt.RData
 RENVFILES = renv.lock renv/activate.R renv/settings.json
 
 build: $(PROJECTFILES) $(RENVFILES)
