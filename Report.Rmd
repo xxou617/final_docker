@@ -1,0 +1,77 @@
+---
+title: "Final project"
+author: "xiaxian ou"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = F,message = F)
+# pacman::p_load(sjPlot,here)
+library(sjPlot)
+here::i_am(
+  "Report.Rmd"
+)
+```
+
+# 1. Introduction
+
+## 1.1 Data information
+
+This dataset contains detailed information on the risk factors for cardiovascular disease. It includes information on **age, gender, height, weight, blood pressure values, cholesterol levels, glucose levels, smoking habits and alcohol consumption** of over 70 thousand individuals. Additionally it outlines if the person is **active or not and if he or she has any cardiovascular diseases (CVD)**.
+
+
+Variables information:
+
+| Column       | Description                                             | Data Type |
+|:-------------|:--------------------------------------------------------|:----------|
+| age          | Age of the individual.                                  | Integer   |
+| gender       | Gender of the individual.                               | String    |
+| height       | Height of the individual in centimeters.                | Integer   |
+| weight       | Weight of the individual in kilograms.                  | Integer   |
+| ap_hi        | Systolic blood pressure reading.                        | Integer   |
+| ap_lo        | Diastolic blood pressure reading.                       | Integer   |
+| cholesterol  | Cholesterol level of the individual.                    | Integer   |
+| gluc         | Glucose level of the individual.                        | Integer   |
+| smoke        | Smoking status of the individual.                       | Boolean   |
+| alco         | Alcohol consumption status of the individual.           | Boolean   |
+| active       | Physical activity level of the individual.              | Boolean   |
+| cardio       | Presence or absence of cardiovascular disease.          | Boolean   |
+
+
+## 1.2 Analysis objectives
+
+1. Compare the difference of characteristics in individuals with CVD or without CVD.
+2. Use logistic regression to explore the factors for CVD.
+
+
+# 2. Table
+
+## 2.1 descriptive table
+label data:
+
+
+
+```{r}
+readRDS(here::here("output/table_summary.rds"))
+```
+This table compares various characteristics between individuals with and without cardiovascular disease (CVD) in a sample of 70,000. Age,gender, weight, blood pressure, cholesterol, glucose levels, and physical activity show significant differences between the two groups with and without cardiovascular disease (CVD). The individuals in CVD group had older age, slightly higher proportion of female, higher weights, higher systolic blood pressure, diastolic blood pressure, cholesterol level, glucose level and lower proportion of physical activity.
+
+
+## 2.2 logistic regression model
+```{r}
+readRDS(here::here("output/table_model.rds"))
+```
+
+Age, height, weight, systolic blood pressure, diastolic blood pressure, cholesterol level, glucose level, smoking, Alcohol consumption, physical activity were associated with CVD.
+
+# 3. Figure
+
+```{r}
+#| fig.align = "center",
+#| out.width = 800
+
+readRDS(here::here("output/plot_CVD_cholesterol.rds"))
+```
+
+The bar plot displays the proportion of individuals with cardiovascular disease (CVD) across different cholesterol levels: low, median, and high. It shows a clear trend where the proportion of CVD increases with higher cholesterol levels. This suggests a positive association between cholesterol level and the risk of cardiovascular disease, with the likelihood of CVD being highest among those with high cholesterol.
